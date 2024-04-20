@@ -19,5 +19,17 @@ const GET_BLOGS_INFO = gql`
   }
 `;
 
+const GET_AUTHORS_INFO = gql`
+  query {
+    authors {
+      id
+      name
+      slug
+      avatar {
+        url
+      }
+    }
+  }
+`;
 
-export { GET_BLOGS_INFO }
+export { GET_BLOGS_INFO, GET_AUTHORS_INFO };
