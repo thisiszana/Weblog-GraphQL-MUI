@@ -45,7 +45,10 @@ function CardEL({ post }) {
         </CardContent>
         <Divider variant="middle" sx={{ margin: 2 }} />
         <CardActions>
-          {/* <Link to={`/blog/${slug}`} style={{ textDecoration: "none", width="100%" }}> */}
+          <Link 
+          to={`/blogs/${slug}`} 
+          style={{ textDecoration: "none", width:"100%" }}
+          >
           <Button
             variant="outlined"
             size="small"
@@ -59,7 +62,7 @@ function CardEL({ post }) {
           >
             مشاهده مطلب
           </Button>
-          {/* </Link> */}
+          </Link>
         </CardActions>
       </CardActionArea>
     </Card>
