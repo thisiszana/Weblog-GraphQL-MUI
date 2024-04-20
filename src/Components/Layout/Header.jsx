@@ -3,13 +3,13 @@ import BookIcon from "@mui/icons-material/Book";
 
 function Header() {
   return (
-    <AppBar poasition="static">
+    <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar>
-          <Typography component="h1" variant="h5" fontWeight="700" sx={{ flexGrow: 1 }}>
+          <Typography component="h1" variant="h5" fontWeight="bold" flex={1}>
             وبلاگ زد
           </Typography>
-          <BookIcon/>
+          <BookIcon />
         </Toolbar>
       </Container>
     </AppBar>
