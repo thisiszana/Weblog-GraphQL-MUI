@@ -13,6 +13,7 @@ import {
 import { Link } from "react-router-dom";
 
 function CardEL({ title, slug, coverPhoto, author1 }) {
+  
   // const { title, slug, coverPhoto, author1 } = post;
 
   return (

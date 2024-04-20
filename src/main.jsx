@@ -8,7 +8,7 @@ import App from "./App.jsx";
 import "./Styles/global.css";
 
 const client = new ApolloClient({
-  uri: "https://api-us-west-2.hygraph.com/v2/clv50ghsp0a2v07w7kqueezbj/master",
+  uri: import.meta.env.VITE_APP_GRAPHCMS_URI,
   cache: new InMemoryCache(),
 });
 
