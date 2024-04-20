@@ -6,10 +6,12 @@ import { Avatar, Divider, Grid, Typography } from "@mui/material";
 import { GET_AUTHORS_INFO } from "../../GraphQL/queries";
 import { Link } from "react-router-dom";
 
+import Loader from "../Shared/Loader";
+
 function Authors() {
   const { loading, data, error } = useQuery(GET_AUTHORS_INFO);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>{error.message}</p>;
 
   return (
