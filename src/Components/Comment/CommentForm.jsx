@@ -9,7 +9,7 @@ function CommentForm({ slug }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
-  const [pressed, setPressed] = useState(false);
+  const [pressed, setPressed] = useState(true);
 
   const [sendComment, { loading, data }] = useMutation(SEND_COMMENT, {
     variables: { name, email, text, slug },
@@ -19,7 +19,7 @@ function CommentForm({ slug }) {
     if (name && email && text) {
       sendComment();
     } else {
-      toast.error("تمام فیلد ها را پر کنید!", { position: "top-center" });
+      toast.warn("تمام فیلد ها را پر کنید!", { position: "top-center" });
     }
   };
 
@@ -28,6 +28,9 @@ function CommentForm({ slug }) {
       position: "top-center",
     });
     setPressed(false);
+    setName("");
+    setEmail("");
+    setText("");
   }
 
   return (
